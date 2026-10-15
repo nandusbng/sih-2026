@@ -1,0 +1,532 @@
+:root {
+  /* TARANG Hydro-Intelligence Professional Design System Tokens */
+  --bg-app: #f1f5f9;
+  --bg-card: #ffffff;
+  --bg-subtle: #f8fafc;
+  
+  --surface: #ffffff;
+  --surface-dim: #f8fafc;
+  --surface-bright: #ffffff;
+  --surface-container-lowest: #f1f5f9;
+  --surface-container-low: #ffffff;
+  --surface-container: #ffffff;
+  --surface-container-high: #f8fafc;
+  --surface-container-highest: #e2e8f0;
+
+  --bg-dark-900: #f1f5f9;
+  --bg-dark-800: #ffffff;
+  --bg-dark-700: #f8fafc;
+  --bg-dark-600: #e2e8f0;
+
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --text-dim: #64748b;
+  --on-surface: #0f172a;
+  --on-surface-variant: #475569;
+  
+  --border-color: #e2e8f0;
+  --border-focus: #0284c7;
+  --outline: #cbd5e1;
+  --outline-variant: #e2e8f0;
+
+  --primary: #0284c7;
+  --primary-container: #0284c7;
+  --primary-glow: rgba(2, 132, 199, 0.25);
+  --on-primary: #ffffff;
+  
+  --secondary: #0d9488;
+  --secondary-container: #0d9488;
+  --on-secondary-container: #ffffff;
+  
+  --tertiary: #7c3aed;
+  --tertiary-container: #7c3aed;
+  --emerald: #16a34a;
+  --amber: #d97706;
+  --red: #dc2626;
+  --cyan: #0284c7;
+  --error: #ef4444;
+  --error-container: #fee2e2;
+
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Inter', 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  --shadow-card: 0 4px 20px -2px rgba(0, 0, 0, 0.06), 0 2px 6px -1px rgba(0, 0, 0, 0.03);
+  --shadow-hover: 0 10px 25px -3px rgba(0, 0, 0, 0.09), 0 4px 8px -2px rgba(0, 0, 0, 0.04);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Custom Professional Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* TARANG Professional Card Styling */
+.glass-panel,
+.tactical-glass,
+.tactical-glass-heavy {
+  background: #ffffff !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: var(--radius-lg) !important;
+  box-shadow: var(--shadow-card) !important;
+  color: var(--text-main) !important;
+  transition: all 0.2s ease;
+}
+
+.glass-panel:hover,
+.tactical-glass:hover {
+  box-shadow: var(--shadow-hover) !important;
+}
+
+/* Typography Overrides */
+.portal-layout-content h1,
+.portal-layout-content h2,
+.portal-layout-content h3,
+.portal-layout-content h4,
+.portal-layout-content h5,
+.portal-layout-content h6,
+.login-card-surface h1,
+.login-card-surface h2,
+.login-card-surface h3,
+.app-shell h1,
+.app-shell h2,
+.app-shell h3 {
+  color: #0f172a;
+  font-family: var(--font-sans);
+  letter-spacing: -0.02em;
+}
+
+.portal-title {
+  color: #0f172a !important;
+  font-size: 1.75rem !important;
+  font-weight: 800 !important;
+}
+
+.portal-subtitle {
+  color: #475569 !important;
+  font-size: 0.925rem !important;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 9px 18px;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+  letter-spacing: 0.01em;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(2, 132, 199, 0.35) !important;
+  border: none !important;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #0369a1 0%, #075985 100%) !important;
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.5) !important;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: #ffffff !important;
+  color: #1e293b !important;
+  border: 1px solid #cbd5e1 !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+
+.btn-secondary:hover {
+  background: #f8fafc !important;
+  border-color: #94a3b8 !important;
+  color: #0f172a !important;
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(220, 38, 38, 0.3) !important;
+}
+
+.btn-danger:hover {
+  background: #b91c1c !important;
+}
+
+.btn-sm {
+  padding: 5px 12px;
+  font-size: 0.775rem;
+}
+
+/* Colorful Badges (TARANG Pastel Solid Styling) */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 9px;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.badge-cyan {
+  background: #e0f2fe !important;
+  color: #0369a1 !important;
+  border: 1px solid #bae6fd !important;
+}
+
+.badge-amber {
+  background: #fef3c7 !important;
+  color: #b45309 !important;
+  border: 1px solid #fde68a !important;
+}
+
+.badge-red {
+  background: #fee2e2 !important;
+  color: #b91c1c !important;
+  border: 1px solid #fca5a5 !important;
+}
+
+.badge-emerald {
+  background: #dcfce7 !important;
+  color: #15803d !important;
+  border: 1px solid #bbf7d0 !important;
+}
+
+.badge-purple {
+  background: #f3e8ff !important;
+  color: #7e22ce !important;
+  border: 1px solid #e9d5ff !important;
+}
+
+/* Pulsing radar dot */
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  animation: pulse 1.8s infinite;
+}
+
+.pulse-dot-red {
+  background: #ef4444;
+  box-shadow: 0 0 8px #ef4444;
+}
+
+.pulse-dot-green {
+  background: #10b981;
+  box-shadow: 0 0 8px #10b981;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.4); opacity: 1; }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+/* Professional Clean Data Table */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.data-table th {
+  text-align: left;
+  padding: 11px 14px;
+  background: #f8fafc !important;
+  color: #475569 !important;
+  font-weight: 700;
+  font-size: 0.75rem;
+  border-bottom: 2px solid #e2e8f0 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.data-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #f1f5f9 !important;
+  color: #1e293b !important;
+}
+
+.data-table tr:hover td {
+  background: #f0f9ff !important;
+}
+
+/* Form Controls */
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.775rem;
+  font-weight: 700;
+  color: #334155 !important;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.form-input, .form-select, select, input[type="text"], input[type="number"] {
+  width: 100%;
+  padding: 10px 14px;
+  background: #ffffff !important;
+  border: 1px solid #cbd5e1 !important;
+  border-radius: var(--radius-sm);
+  color: #0f172a !important;
+  font-size: 0.875rem;
+  outline: none;
+  transition: all 0.2s;
+  box-shadow: var(--shadow-sm);
+}
+
+.form-input:focus, .form-select:focus, select:focus {
+  border-color: #0284c7 !important;
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15) !important;
+}
+
+/* Leaflet Container Overrides (Light & Crisp) */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  background: #e2e8f0 !important;
+  font-family: var(--font-sans) !important;
+}
+
+.leaflet-popup-content-wrapper {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border: 1px solid #cbd5e1 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+.leaflet-popup-tip {
+  background: #ffffff !important;
+}
+
+/* Helper flex and layout classes */
+.flex-align-gap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.block {
+  display: block;
+}
+
+/* ==========================================================================
+   TARANG Executive Uncongested Portal Layout System
+   ========================================================================== */
+.portal-page-container {
+  padding: 32px 48px 64px 48px;
+  max-width: 1560px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  min-height: calc(100vh - 120px);
+}
+
+.portal-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.portal-title {
+  font-family: var(--font-sans);
+  font-size: 1.85rem !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.025em;
+  color: #0f172a !important;
+  line-height: 1.25;
+  margin-top: 6px;
+  margin-bottom: 8px;
+}
+
+.portal-subtitle {
+  color: #475569 !important;
+  font-size: 0.95rem !important;
+  line-height: 1.6;
+  max-width: 900px;
+}
+
+/* Responsive Spacious Column Grids */
+.content-two-columns {
+  display: grid;
+  grid-template-columns: 1.18fr 0.82fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.content-three-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+@media (max-width: 1200px) {
+  .content-two-columns {
+    grid-template-columns: 1fr;
+  }
+  .portal-page-container {
+    padding: 24px 24px 48px 24px;
+  }
+}
+
+/* Panel Header Bars */
+.panel-title-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.panel-h2 {
+  font-size: 1.15rem !important;
+  font-weight: 700 !important;
+  color: #0f172a !important;
+  letter-spacing: -0.01em;
+}
+
+/* Utilities for Spacing and Typography */
+.text-white {
+  color: #0f172a !important; /* Force dark text in light theme to prevent invisible text */
+}
+
+/* Ensure colored banners and buttons keep crisp white text */
+.emergency-broadcast-banner,
+.emergency-broadcast-banner *,
+.dispatch-toast-alert,
+.dispatch-toast-alert *,
+.btn-primary,
+.btn-primary *,
+.btn-danger,
+.btn-danger * {
+  color: #ffffff !important;
+}
+
+.text-dim {
+  color: #64748b !important;
+}
+
+.text-muted {
+  color: #64748b !important;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.p-4 { padding: 20px !important; }
+.p-5 { padding: 26px !important; }
+.p-6 { padding: 32px !important; }
+
+.mb-1 { margin-bottom: 4px; }
+.mb-2 { margin-bottom: 8px; }
+.mb-3 { margin-bottom: 14px; }
+.mb-4 { margin-bottom: 20px; }
+.mt-2 { margin-top: 8px; }
+.mt-4 { margin-top: 20px; }
+
+/* Enhanced Spacious Data Table */
+.data-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.875rem;
+}
+
+.data-table th {
+  padding: 13px 18px;
+  background: #f8fafc !important;
+  color: #475569 !important;
+  font-weight: 700;
+  font-size: 0.75rem;
+  border-bottom: 2px solid #e2e8f0 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.data-table td {
+  padding: 15px 18px;
+  border-bottom: 1px solid #f1f5f9 !important;
+  color: #0f172a !important;
+  vertical-align: middle;
+}
+
+.data-table tr:hover td {
+  background: #f8fafc !important;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid #f1f5f9;
+}
